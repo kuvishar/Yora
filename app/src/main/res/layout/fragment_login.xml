@@ -20,7 +20,7 @@
         android:layout_below="@id/fragment_login_userName" />
 
     <Button
-        android:id="@+id/fragment_login_login"
+        android:id="@+id/fragment_login_loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
