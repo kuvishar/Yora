@@ -7,10 +7,12 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.atam.yora.R;
 import com.example.atam.yora.infrastructure.YoraApplication;
+import com.example.atam.yora.views.NavDrawer;
 
 public abstract class BaseActivity extends AppCompatActivity {
     protected YoraApplication application;
     protected Toolbar toolbar;
+    protected NavDrawer navDrawer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,5 +30,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (toolbar != null)
             setSupportActionBar(toolbar);
 
+    }
+
+    public void setNavDrawer(NavDrawer navDrawer) {
+        this.navDrawer = navDrawer;
+        this.navDrawer.create();
     }
 }
