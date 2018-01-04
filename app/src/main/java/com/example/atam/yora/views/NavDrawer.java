@@ -109,7 +109,8 @@ public class NavDrawer {
             if (container == null)
                 throw new RuntimeException("Nav drawer item" + text + "could not attached to Viewgroup. View not found");
 
-            view = inflater.inflate(R.layout.list_item_nav_drawer, container);
+            view = inflater.inflate(R.layout.list_item_nav_drawer, container, false);
+            container.addView(view);
             view.setOnClickListener(this);
 
             icon = (ImageView) view.findViewById(R.id.list_item_nav_drawer_icon);

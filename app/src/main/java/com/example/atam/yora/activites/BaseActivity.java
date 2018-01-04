@@ -13,6 +13,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected YoraApplication application;
     protected Toolbar toolbar;
     protected NavDrawer navDrawer;
+    private YoraApplication yoraApplication;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,5 +40,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public Toolbar getToolbar() {
         return toolbar;
+    }
+
+    public YoraApplication getYoraApplication() {
+        return application;
     }
 }

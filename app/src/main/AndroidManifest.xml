@@ -24,6 +24,12 @@
         <activity android:name=".activites.RegisterActivity" />
 
         <activity android:name=".activites.ExternalLoginActivity" />
+        
+        <activity android:name=".activites.ProfileActivity" />
+        
+        <activity android:name=".activites.ContactsActivity" />
+        
+        <activity android:name=".activites.SentMessagesActivity" />
 
     </application>
 
