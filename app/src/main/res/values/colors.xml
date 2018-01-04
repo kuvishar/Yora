@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="primaryColorDark">#2196f3</color>
     <color name="primaryColorDarker">#3f51b5</color>
+    <color name="list_item_nav_drawer_selected_item_text_color">#2196F3</color>
 </resources>

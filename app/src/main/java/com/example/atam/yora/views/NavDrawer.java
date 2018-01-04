@@ -110,9 +110,11 @@ public class NavDrawer {
                 throw new RuntimeException("Nav drawer item" + text + "could not attached to Viewgroup. View not found");
 
             view = inflater.inflate(R.layout.list_item_nav_drawer, container);
+            view.setOnClickListener(this);
+
             icon = (ImageView) view.findViewById(R.id.list_item_nav_drawer_icon);
             textView = (TextView) view.findViewById(R.id.list_item_nav_drawer_text);
-            badge = (TextView) view.findViewById(R.id.list_item_nav_drawer_badge);
+            badgeTextView = (TextView) view.findViewById(R.id.list_item_nav_drawer_badge);
             defaultColor = textView.getCurrentTextColor();
 
             icon.setImageResource(iconDrawable);
@@ -147,7 +149,7 @@ public class NavDrawer {
                 if (badge != null)
                     badgeTextView.setVisibility(View.VISIBLE);
                 else
-                badgeTextView.setVisibility(View.GONE);
+                    badgeTextView.setVisibility(View.GONE);
 
             }
         }
@@ -187,14 +189,14 @@ public class NavDrawer {
 
         @Override
         public void onClick(View view) {
-             navDrawer.setOpen(false);
+            navDrawer.setOpen(false);
 
-             if (navDrawer.activity.getClass() == targetActivity)
-                 return;
+            if (navDrawer.activity.getClass() == targetActivity)
+                return;
 
-             super.onClick(view);
+            super.onClick(view);
 
-             //TODO: animation
+            //TODO: animation
             navDrawer.activity.startActivity(new Intent(navDrawer.activity, targetActivity));
             navDrawer.activity.finish();
         }
