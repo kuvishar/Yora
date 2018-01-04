@@ -36,4 +36,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         this.navDrawer = navDrawer;
         this.navDrawer.create();
     }
+
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
 }
